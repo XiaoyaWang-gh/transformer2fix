@@ -1,0 +1,2 @@
+# transformer2fix
+transformer2fix是一个用opennmt-py机器翻译框架实现的序列到序列模型，能够对Java的方法中出现的缺陷进行单行替换修复。

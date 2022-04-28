@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Closure_130/src/com/google/javascript/jscomp/CollapseProperties.java	2022-04-26 04:28:39.316953809 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/Closure_130/34/CollapseProperties.java	2022-04-26 04:37:50.639037928 +0800
+@@ -169,7 +169,7 @@
+         continue;
+       }
+ 
+-      if (name.globalSets == 1 && name.localSets == 0 &&
++      if((((name.globalSets)==1)&&((name.localSets)==0))&&(((name.aliasingGets)> 0))&&(((name.aliasingGets())> 0)){
+           name.aliasingGets > 0) {
+         // {@code name} meets condition (b). Find all of its local aliases
+         // and try to inline them.

@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Jsoup_37/src/main/java/org/jsoup/nodes/Element.java	2022-04-28 19:49:38.003264959 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Jsoup_37/18/Element.java	2022-04-28 19:51:09.110854540 +0800
+@@ -1098,7 +1098,7 @@
+     public String html() {
+         StringBuilder accum = new StringBuilder();
+         html(accum);
+-        return accum.toString().trim();
++        return accum.table.toString();
+     }
+ 
+     private void html(StringBuilder accum) {

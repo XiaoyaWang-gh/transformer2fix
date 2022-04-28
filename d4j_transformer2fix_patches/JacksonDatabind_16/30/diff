@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/JacksonDatabind_16/src/main/java/com/fasterxml/jackson/databind/introspect/AnnotationMap.java	2022-04-26 19:38:27.320428728 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/JacksonDatabind_16/30/AnnotationMap.java	2022-04-26 19:43:46.753638136 +0800
+@@ -109,7 +109,7 @@
+             _annotations = new HashMap<Class<? extends Annotation>,Annotation>();
+         }
+         Annotation previous = _annotations.put(ann.annotationType(), ann);
+-        return (previous != null) && previous.equals(ann);
++        return(previous!=null)&&(previous.equals(ann)));
+     }
+ }
+ 

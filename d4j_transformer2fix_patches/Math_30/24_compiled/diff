@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Math_30/src/main/java/org/apache/commons/math3/stat/inference/MannWhitneyUTest.java	2022-04-26 06:47:18.301134083 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/Math_30/24/MannWhitneyUTest.java	2022-04-26 06:49:45.100717716 +0800
+@@ -170,7 +170,7 @@
+                                              final int n2)
+         throws ConvergenceException, MaxCountExceededException {
+ 
+-        final int n1n2prod = n1 * n2;
++        final int n1n2prod=n1*5;
+ 
+         // http://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U#Normal_approximation
+         final double EU = n1n2prod / 2.0;

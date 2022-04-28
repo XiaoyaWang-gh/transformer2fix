@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Cli_40/src/main/java/org/apache/commons/cli/TypeHandler.java	2022-04-28 18:56:47.634531008 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Cli_40/13/TypeHandler.java	2022-04-28 18:57:40.842424879 +0800
+@@ -100,7 +100,7 @@
+         }
+         else
+         {
+-            return null;
++            return TypeHandler.TypeHandler;
+         }
+     }
+ 

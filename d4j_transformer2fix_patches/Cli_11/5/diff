@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Cli_11/src/java/org/apache/commons/cli/HelpFormatter.java	2022-04-28 18:52:31.263138259 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Cli_11/5/HelpFormatter.java	2022-04-28 18:56:09.402610900 +0800
+@@ -629,7 +629,7 @@
+         }
+ 
+         // if the Option has a value
+-        if (option.hasArg() && (option.getArgName() != null))
++        if((option.hasArg())&&((option.hasArg())!=null)){
+         {
+             buff.append(" <").append(option.getArgName()).append(">");
+         }

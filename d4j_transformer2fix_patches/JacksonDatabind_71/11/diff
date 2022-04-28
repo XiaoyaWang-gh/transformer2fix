@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/JacksonDatabind_71/src/main/java/com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java	2022-04-26 21:22:07.510031568 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/JacksonDatabind_71/11/StdKeyDeserializer.java	2022-04-26 21:27:03.280972729 +0800
+@@ -72,7 +72,7 @@
+         int kind;
+ 
+         // first common types:
+-        if (raw == String.class || raw == Object.class) {
++        if(!(raw==(String.class))){
+             return StringKD.forType(raw);
+         } else if (raw == UUID.class) {
+             kind = TYPE_UUID;

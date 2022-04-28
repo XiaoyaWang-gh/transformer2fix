@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/JacksonDatabind_70/src/main/java/com/fasterxml/jackson/databind/deser/impl/BeanPropertyMap.java	2022-04-26 21:13:21.105985301 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/JacksonDatabind_70/10/BeanPropertyMap.java	2022-04-25 20:03:48.655659657 +0800
+@@ -437,7 +437,7 @@
+             if (!found) {
+                 // 09-Jan-2017, tatu: Important: must check name slot and NOT property name,
+                 //   as only former is lower-case in case-insensitive case
+-                found = key.equals(prop.getName());
++                found=key.getName().equals(key);
+                 if (found) {
+                     // need to leave a hole here
+                     _propsInOrder[_findFromOrdered(prop)] = null;

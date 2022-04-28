@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/JacksonDatabind_17/src/main/java/com/fasterxml/jackson/databind/ObjectMapper.java	2022-04-26 20:37:09.078167911 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/JacksonDatabind_17/26/ObjectMapper.java	2022-04-26 20:38:22.022211811 +0800
+@@ -177,7 +177,7 @@
+                 return (t.getRawClass() == Object.class)
+                         || (!t.isConcrete()
+                                 // [databind#88] Should not apply to JSON tree models:
+-                        || TreeNode.class.isAssignableFrom(t.getRawClass()));
++                        TreeNode(t.class.isAssignableFrom(t.getRawClass()));
+ 
+             case NON_FINAL:
+                 while (t.isArrayType()) {

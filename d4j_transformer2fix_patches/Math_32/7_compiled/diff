@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Math_32/src/main/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet.java	2022-04-26 08:08:57.821206751 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/Math_32/7/PolygonsSet.java	2022-04-26 08:13:00.452645104 +0800
+@@ -133,7 +133,7 @@
+ 
+         if (v.length == 0) {
+             final BSPTree<Euclidean2D> tree = getTree(false);
+-            if ((Boolean) tree.getAttribute()) {
++            if((tree)!=(tree.getAttribute())){
+                 // the instance covers the whole space
+                 setSize(Double.POSITIVE_INFINITY);
+                 setBarycenter(Vector2D.NaN);

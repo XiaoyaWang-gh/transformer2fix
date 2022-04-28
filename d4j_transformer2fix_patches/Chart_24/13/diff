@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Chart_24/source/org/jfree/chart/renderer/GrayPaintScale.java	2022-04-26 09:43:23.155248600 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_1_patches/Chart_24/13/GrayPaintScale.java	2022-04-26 09:49:31.414566123 +0800
+@@ -123,7 +123,7 @@
+     public Paint getPaint(double value) {
+         double v = Math.max(value, this.lowerBound);
+         v = Math.min(v, this.upperBound);
+-        int g = (int) ((value - this.lowerBound) / (this.upperBound 
++        int g=((int)(value-(this.upperBound)));
+                 - this.lowerBound) * 255.0);
+         return new Color(g, g, g);
+     }

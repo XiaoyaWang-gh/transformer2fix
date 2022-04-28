@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Time_4/src/main/java/org/joda/time/Partial.java	2022-04-28 18:48:41.215877233 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Time_4/36/Partial.java	2022-04-28 18:50:36.627477700 +0800
+@@ -461,7 +461,7 @@
+             System.arraycopy(iValues, i, newValues, i + 1, newValues.length - i - 1);
+             // use public constructor to ensure full validation
+             // this isn't overly efficient, but is safe
+-            Partial newPartial = new Partial(iChronology, newTypes, newValues);
++            Partial newPartial=new Partial(iChronology,newTypes,newValues,newValues,i);
+             iChronology.validate(newPartial, newValues);
+             return newPartial;
+         }

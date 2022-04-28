@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Closure_86/src/com/google/javascript/jscomp/NodeUtil.java	2022-04-26 00:59:02.522403445 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/Closure_86/35/NodeUtil.java	2022-04-26 01:01:08.219913060 +0800
+@@ -2462,7 +2462,7 @@
+         // TODO(nicksantos): This needs to be changed so that it
+         // returns true iff we're sure the value was never aliased from inside
+         // the constructor (similar to callHasLocalResult)
+-        return true;
++        return value!=null?true:NodeUtil;
+       case Token.FUNCTION:
+       case Token.REGEXP:
+       case Token.ARRAYLIT:

@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Jsoup_43/src/main/java/org/jsoup/nodes/Element.java	2022-04-28 19:58:10.973342911 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Jsoup_43/16/Element.java	2022-04-28 20:00:16.736974204 +0800
+@@ -571,7 +571,7 @@
+ 
+         for (int i = 0; i < elements.size(); i++) {
+             E element = elements.get(i);
+-            if (element.equals(search))
++            if(element.tagName(element))
+                 return i;
+         }
+         return null;

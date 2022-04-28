@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Cli_28/src/java/org/apache/commons/cli/Parser.java	2022-04-28 11:56:23.165324737 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_1-2_patches/Cli_28/20/Parser.java	2022-04-28 11:56:27.449319467 +0800
+@@ -287,7 +287,7 @@
+                 {
+                     // if the value is not yes, true or 1 then don't add the
+                     // option to the CommandLine
+-                    break;
++                    CommandLineParser=cmd;
+                 }
+ 
+                 cmd.addOption(opt);

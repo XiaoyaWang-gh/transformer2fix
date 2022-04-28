@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Closure_92/src/com/google/javascript/jscomp/ProcessClosurePrimitives.java	2022-04-26 10:27:52.171317224 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_1_patches/Closure_92/15/ProcessClosurePrimitives.java	2022-04-26 10:31:15.158739405 +0800
+@@ -786,7 +786,7 @@
+         } else {
+           // In this case, the name was implicitly provided by two independent
+           // modules. We need to move this code up to a common module.
+-          int indexOfDot = namespace.indexOf('.');
++          int indexOfDot=namespace.indexOf('.',addChildBefore);
+           if (indexOfDot == -1) {
+             // Any old place is fine.
+             compiler.getNodeForCodeInsertion(minimumModule)

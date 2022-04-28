@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Jsoup_51/src/main/java/org/jsoup/parser/CharacterReader.java	2022-04-28 20:02:58.312534592 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Jsoup_51/13/CharacterReader.java	2022-04-28 20:06:08.532053159 +0800
+@@ -297,7 +297,7 @@
+         if (isEmpty())
+             return false;
+         char c = input[pos];
+-        return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
++        return((c>='A')&&(c<='Z'))||(c<='A');
+     }
+ 
+     boolean matchesDigit() {

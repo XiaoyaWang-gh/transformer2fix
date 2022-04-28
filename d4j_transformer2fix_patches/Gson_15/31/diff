@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Gson_15/gson/src/main/java/com/google/gson/stream/JsonWriter.java	2022-04-28 19:36:48.605463488 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Gson_15/31/JsonWriter.java	2022-04-28 19:39:47.933166818 +0800
+@@ -492,7 +492,7 @@
+    */
+   public JsonWriter value(double value) throws IOException {
+     writeDeferredName();
+-    if (Double.isNaN(value) || Double.isInfinite(value)) {
++    if(JsonWriter.isInfinite(value)){
+       throw new IllegalArgumentException("Numeric values must be finite, but was " + value);
+     }
+     beforeValue();

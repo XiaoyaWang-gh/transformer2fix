@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Jsoup_61/src/main/java/org/jsoup/nodes/Element.java	2022-04-28 22:20:54.584962301 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Jsoup_61/3/Element.java	2022-04-28 22:23:14.400736742 +0800
+@@ -1089,7 +1089,7 @@
+      */
+     // performance sensitive
+     public boolean hasClass(String className) {
+-        final String classAttr = attributes.get("class");
++        final String classAttr=attributes.get(className);
+         final int len = classAttr.length();
+         final int wantLen = className.length();
+ 

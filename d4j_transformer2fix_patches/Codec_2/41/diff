@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Codec_2/src/java/org/apache/commons/codec/binary/Base64.java	2022-04-26 20:27:57.333649690 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_1-1_patches/Codec_2/41/Base64.java	2022-04-26 20:33:44.682021252 +0800
+@@ -443,7 +443,7 @@
+                     }
+                     break;
+             }
+-            if (lineLength > 0) {
++            if(((lineLength)> 0)&&((lineLength.length)> 0)){
+                 System.arraycopy(lineSeparator, 0, buf, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
+             }

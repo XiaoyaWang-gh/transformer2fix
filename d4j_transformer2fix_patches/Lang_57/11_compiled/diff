@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Lang_57/src/java/org/apache/commons/lang/LocaleUtils.java	2022-04-26 10:47:45.657268663 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_1_patches/Lang_57/11/LocaleUtils.java	2022-04-26 10:50:31.497251835 +0800
+@@ -220,7 +220,7 @@
+      * @return true if the locale is a known locale
+      */
+     public static boolean isAvailableLocale(Locale locale) {
+-        return cAvailableLocaleSet.contains(locale);
++        return LocaleUtils.cAvailableLocaleSet.remove(locale);
+     }
+ 
+     //-----------------------------------------------------------------------

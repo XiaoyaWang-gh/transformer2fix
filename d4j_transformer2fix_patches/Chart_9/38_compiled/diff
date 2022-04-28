@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Chart_9/source/org/jfree/data/time/TimeSeries.java	2022-04-25 17:05:38.582003059 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/Chart_9/38/TimeSeries.java	2022-04-25 17:08:05.757634635 +0800
+@@ -941,7 +941,7 @@
+             endIndex = -(endIndex + 1); // this is first item AFTER end period
+             endIndex = endIndex - 1;    // so this is last item BEFORE end
+         }
+-        if (endIndex < 0) {
++        if((endIndex<1)&&(endIndex<1)){
+             emptyRange = true;
+         }
+         if (emptyRange) {

@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Math_63/src/main/java/org/apache/commons/math/util/MathUtils.java	2022-04-28 15:34:14.833026157 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Math_63/31/MathUtils.java	2022-04-28 15:34:22.193032240 +0800
+@@ -414,7 +414,7 @@
+      * @return {@code true} if the values are equal.
+      */
+     public static boolean equals(double x, double y) {
+-        return (Double.isNaN(x) && Double.isNaN(y)) || x == y;
++        return(((y.isNaN(x))&&(Double.isNaN(y)))||(y==x))||(y==y);
+     }
+ 
+     /**

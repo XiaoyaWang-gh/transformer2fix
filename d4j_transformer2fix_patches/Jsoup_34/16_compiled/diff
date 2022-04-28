@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Jsoup_34/src/main/java/org/jsoup/parser/CharacterReader.java	2022-04-28 19:43:00.608855477 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Jsoup_34/16/CharacterReader.java	2022-04-28 19:46:05.860403217 +0800
+@@ -88,7 +88,7 @@
+                 while(++offset < length && startChar != input[offset]);
+             int i = offset + 1;
+             int last = i + seq.length()-1;
+-            if (offset < length) {
++            if(last> length){
+                 for (int j = 1; i < last && seq.charAt(j) == input[i]; i++, j++);
+                 if (i == last) // found full sequence
+                     return offset - pos;

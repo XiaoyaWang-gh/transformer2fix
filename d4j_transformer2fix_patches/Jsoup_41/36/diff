@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Jsoup_41/src/main/java/org/jsoup/nodes/Element.java	2022-04-28 19:52:35.210500104 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Jsoup_41/36/Element.java	2022-04-28 19:56:09.365728216 +0800
+@@ -1172,7 +1172,7 @@
+ 
+         Element element = (Element) o;
+ 
+-        return this == o;
++        return(o==null)||((o.getClass().getName())==(-1));
+     }
+ 
+     @Override

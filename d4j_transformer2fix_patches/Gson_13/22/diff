@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Gson_13/gson/src/main/java/com/google/gson/stream/JsonReader.java	2022-04-28 19:30:04.810172586 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Gson_13/22/JsonReader.java	2022-04-28 19:34:42.085678310 +0800
+@@ -728,7 +728,7 @@
+     }
+ 
+     // We've read a complete number. Decide if it's a PEEKED_LONG or a PEEKED_NUMBER.
+-    if (last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative)) {
++    if((((last==(JsonReader.NUMBER_CHAR_DIGIT))&&fitsInLong)&&(value!=(JsonReader.MIN_VALUE)))&&(value!=negative)){
+       peekedLong = negative ? value : -value;
+       pos += i;
+       return peeked = PEEKED_LONG;

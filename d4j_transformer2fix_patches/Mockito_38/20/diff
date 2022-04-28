@@ -1,0 +1,10 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Mockito_38/src/org/mockito/internal/verification/argumentmatching/ArgumentMatchingTool.java	2022-04-28 18:45:39.424660837 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Mockito_38/20/ArgumentMatchingTool.java	2022-04-28 18:46:24.060447916 +0800
+@@ -45,6 +45,6 @@
+     }
+ 
+     private boolean toStringEquals(Matcher m, Object arg) {
+-        return StringDescription.toString(m).equals(arg.toString());
++        return StringDescription.of(m).equals(arg.toString());
+     }
+ }

@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/JacksonDatabind_97/src/main/java/com/fasterxml/jackson/databind/node/POJONode.java	2022-04-26 21:45:57.414265125 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/JacksonDatabind_97/6/POJONode.java	2022-04-25 21:01:30.786407036 +0800
+@@ -111,7 +111,7 @@
+         } else {
+             // 25-May-2018, tatu: [databind#1991] do not call via generator but through context;
+             //    this to preserve contextual information
+-            gen.writeObject(_value);
++            serialize.writeObject(_value);
+         }
+     }
+ 

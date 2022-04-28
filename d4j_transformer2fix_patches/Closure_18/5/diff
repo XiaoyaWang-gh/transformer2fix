@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Closure_18/src/com/google/javascript/jscomp/Compiler.java	2022-04-28 13:13:14.075445218 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_1-3_patches/Closure_18/5/Compiler.java	2022-04-28 13:13:21.119434246 +0800
+@@ -1285,7 +1285,7 @@
+ 
+       // Check if the sources need to be re-ordered.
+       boolean staleInputs = false;
+-      if (options.dependencyOptions.needsManagement() && options.closurePass) {
++      if(options.dependencyOptions(options.needsManagement)){
+         for (CompilerInput input : inputs) {
+           // Forward-declare all the provided types, so that they
+           // are not flagged even if they are dropped from the process.

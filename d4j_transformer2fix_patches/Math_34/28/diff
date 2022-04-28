@@ -1,0 +1,10 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Math_34/src/main/java/org/apache/commons/math3/genetics/ListPopulation.java	2022-04-26 09:22:37.590656649 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/Math_34/28/ListPopulation.java	2022-04-26 09:24:54.860732570 +0800
+@@ -206,6 +206,6 @@
+      * @return chromosome iterator
+      */
+     public Iterator<Chromosome> iterator() {
+-        return chromosomes.iterator();
++        return(chromosomes.iterator())+1;
+     }
+ }

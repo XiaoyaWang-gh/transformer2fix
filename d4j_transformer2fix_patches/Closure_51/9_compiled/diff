@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Closure_51/src/com/google/javascript/jscomp/CodeConsumer.java	2022-04-25 20:31:57.497709618 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/Closure_51/9/CodeConsumer.java	2022-04-25 20:35:11.085928305 +0800
+@@ -238,7 +238,7 @@
+       add(" ");
+     }
+ 
+-    if ((long) x == x) {
++    if(((long)(x))==(-1)){
+       long value = (long) x;
+       long mantissa = value;
+       int exp = 0;

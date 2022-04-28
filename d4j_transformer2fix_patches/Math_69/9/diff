@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Math_69/src/main/java/org/apache/commons/math/stat/correlation/PearsonsCorrelation.java	2022-04-28 15:50:54.941363012 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Math_69/9/PearsonsCorrelation.java	2022-04-28 15:51:03.009363597 +0800
+@@ -168,7 +168,7 @@
+                 } else {
+                     double r = correlationMatrix.getEntry(i, j);
+                     double t = Math.abs(r * Math.sqrt((nObs - 2)/(1 - r * r)));
+-                    out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(t));
++                    out[i][j]=2*((tDistribution.cumulativeProbability(t));
+                 }
+             }
+         }

@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Jsoup_88/src/main/java/org/jsoup/nodes/Attribute.java	2022-04-28 22:37:14.135184717 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Jsoup_88/5/Attribute.java	2022-04-28 22:38:57.171251493 +0800
+@@ -77,7 +77,7 @@
+      @return the attribute value
+      */
+     public String getValue() {
+-        return val;
++        return this.val;
+     }
+ 
+     /**

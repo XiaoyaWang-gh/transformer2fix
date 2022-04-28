@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/JacksonCore_8/src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java	2022-04-26 19:22:49.438550587 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/JacksonCore_8/5/TextBuffer.java	2022-04-25 16:41:14.689503481 +0800
+@@ -304,7 +304,7 @@
+             return (_resultArray = _resultString.toCharArray());
+         }
+         // Nope; but does it fit in just one segment?
+-        if (!_hasSegments)  return _currentSegment;
++        if(!(_hasSegments.toCharArray()))
+         // Nope, need to have/create a non-segmented array and return it
+         return contentsAsArray();
+     }

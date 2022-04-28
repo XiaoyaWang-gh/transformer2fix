@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Cli_25/src/java/org/apache/commons/cli/HelpFormatter.java	2022-04-28 13:44:35.202851085 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_1-3_patches/Cli_25/15/HelpFormatter.java	2022-04-28 13:44:40.242838388 +0800
+@@ -822,7 +822,7 @@
+         if (nextLineTabStop >= width)
+         {
+             // stops infinite loop happening
+-            nextLineTabStop = width - 1;
++            nextLineTabStop=(width-1)-1;
+         }
+ 
+         // all following lines must be padded with nextLineTabStop space 

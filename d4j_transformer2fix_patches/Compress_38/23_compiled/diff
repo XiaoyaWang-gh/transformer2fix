@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Compress_38/src/main/java/org/apache/commons/compress/archivers/tar/TarArchiveEntry.java	2022-04-28 19:09:03.501394556 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_2_patches/Compress_38/23/TarArchiveEntry.java	2022-04-28 19:11:27.973207960 +0800
+@@ -856,7 +856,7 @@
+             return true;
+         }
+ 
+-        if (getName().endsWith("/")) {
++        if(((getName())!=null)&&(getName().endsWith("/"))){
+             return true;
+         }
+ 

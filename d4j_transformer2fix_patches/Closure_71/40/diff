@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Closure_71/src/com/google/javascript/jscomp/CheckAccessControls.java	2022-04-25 23:05:59.551200745 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/Closure_71/40/CheckAccessControls.java	2022-04-25 23:13:00.323740409 +0800
+@@ -413,7 +413,7 @@
+     if (objectType != null) {
+       // Is this a normal property access, or are we trying to override
+       // an existing property?
+-      boolean isOverride = t.inGlobalScope() &&
++      boolean isOverride=((t.inGlobalScope())&&((t.getType())==(parent.getFirstChild())))&&((parent.getFirstChild())==getprop);
+           parent.getType() == Token.ASSIGN &&
+           parent.getFirstChild() == getprop;
+ 

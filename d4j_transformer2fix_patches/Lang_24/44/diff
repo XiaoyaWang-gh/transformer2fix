@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Lang_24/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2022-04-26 05:06:43.216846953 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/Lang_24/44/NumberUtils.java	2022-04-26 05:10:04.764541139 +0800
+@@ -1410,7 +1410,7 @@
+             if (chars[i] == 'l'
+                 || chars[i] == 'L') {
+                 // not allowing L with an exponent or decimal point
+-                return foundDigit && !hasExp;
++                return foundDigit&&((!hasExp[i])&255);
+             }
+             // last character is illegal
+             return false;

@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Jsoup_32/src/main/java/org/jsoup/nodes/Element.java	2022-04-26 22:00:49.765281954 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_patches/Jsoup_32/24/Element.java	2022-04-26 22:03:11.196729196 +0800
+@@ -1135,7 +1135,7 @@
+     @Override
+     public Element clone() {
+         Element clone = (Element) super.clone();
+-        clone.classNames();
++        clone.classNames(super.classNames());
+         return clone;
+     }
+ }

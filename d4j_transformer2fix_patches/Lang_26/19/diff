@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/transformer2fix_projects/Lang_26/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java	2022-04-28 13:21:55.290583974 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/addtionalExper_1-3_patches/Lang_26/19/FastDateFormat.java	2022-04-28 13:21:59.826576165 +0800
+@@ -817,7 +817,7 @@
+      * @return the formatted string
+      */
+     public String format(Date date) {
+-        Calendar c = new GregorianCalendar(mTimeZone);
++        GregorianCalendar c=new GregorianCalendar(10);
+         c.setTime(date);
+         return applyRules(c, new StringBuffer(mMaxLengthEstimate)).toString();
+     }

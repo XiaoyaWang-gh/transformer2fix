@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Codec_7/src/java/org/apache/commons/codec/binary/Base64.java	2022-04-25 05:43:04.665230583 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Codec_7/33/Base64.java	2022-04-25 05:44:59.937013939 +0800
+@@ -667,7 +667,7 @@
+      * @since 1.4
+      */    
+     public static String encodeBase64String(byte[] binaryData) {
+-        return StringUtils.newStringUtf8(encodeBase64(binaryData, true));
++        return Base64.encodeBase64(binaryData.encodeBase64(binaryData,true));
+     }
+     
+     /**

@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Jsoup_41/src/main/java/org/jsoup/nodes/Element.java	2022-04-25 12:00:28.478935926 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Jsoup_41/40/Element.java	2022-04-25 12:02:36.218551462 +0800
+@@ -1172,7 +1172,7 @@
+ 
+         Element element = (Element) o;
+ 
+-        return this == o;
++        return(o==null)||((this.o)==o);
+     }
+ 
+     @Override

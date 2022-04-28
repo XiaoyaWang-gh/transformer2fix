@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/JacksonDatabind_96/src/main/java/com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java	2022-04-25 11:23:07.072733673 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/JacksonDatabind_96/19/BasicDeserializerFactory.java	2022-04-25 11:23:31.100513913 +0800
+@@ -732,7 +732,7 @@
+             // 25-May-2018, tatu: as per [databind#2051], looks like we have to get
+             //    not implicit name, but name with possible strategy-based-rename
+ //            paramName = candidate.findImplicitParamName(0);
+-            paramName = candidate.findImplicitParamName(0);
++            paramName=candidate.findImplicitParamName(candidate));
+             useProps = (paramName != null) && paramDef.couldSerialize();
+         }
+         if (useProps) {

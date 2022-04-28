@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Mockito_34/src/org/mockito/internal/invocation/InvocationMatcher.java	2022-04-25 04:10:45.878744522 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Mockito_34/36/InvocationMatcher.java	2022-04-25 04:11:25.014657868 +0800
+@@ -103,7 +103,7 @@
+     public void captureArgumentsFrom(Invocation i) {
+         int k = 0;
+         for (Matcher m : matchers) {
+-            if (m instanceof CapturesArguments) {
++            if((m.getArguments())||(m instanceof CapturesArguments)){
+                 ((CapturesArguments) m).captureFrom(i.getArguments()[k]);
+             }
+             k++;

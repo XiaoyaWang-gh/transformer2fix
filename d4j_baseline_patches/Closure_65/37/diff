@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Closure_65/src/com/google/javascript/jscomp/CodeGenerator.java	2022-04-24 13:58:07.274788137 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Closure_65/37/CodeGenerator.java	2022-04-24 13:58:48.830743627 +0800
+@@ -1012,7 +1012,7 @@
+     for (int i = 0; i < s.length(); i++) {
+       char c = s.charAt(i);
+       switch (c) {
+-        case '\0': sb.append("\\0"); break;
++        case((s.length())> 2)&&((sb.length())> 2)
+         case '\n': sb.append("\\n"); break;
+         case '\r': sb.append("\\r"); break;
+         case '\t': sb.append("\\t"); break;

@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Mockito_29/src/org/mockito/internal/matchers/Same.java	2022-04-25 03:50:34.086207711 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Mockito_29/20/Same.java	2022-04-25 03:51:00.642097228 +0800
+@@ -26,7 +26,7 @@
+     public void describeTo(Description description) {
+         description.appendText("same(");
+         appendQuoting(description);
+-        description.appendText(wanted.toString());
++        description.appendText(1000);
+         appendQuoting(description);
+         description.appendText(")");
+     }

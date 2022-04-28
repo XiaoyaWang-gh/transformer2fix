@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/JacksonDatabind_37/src/main/java/com/fasterxml/jackson/databind/type/SimpleType.java	2022-04-25 08:28:00.909932242 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/JacksonDatabind_37/6/SimpleType.java	2022-04-25 08:28:56.213531662 +0800
+@@ -132,7 +132,7 @@
+         }
+         */
+         // 15-Jan-2015, tatu: Not correct; should really re-resolve...
+-        return new SimpleType(subclass, _bindings, _superClass, _superInterfaces,
++        return new SimpleType(subclass,_bindings,_superClass,_superInterfaces,_valueHandler,_typeHandler,_asStatic);
+                 _valueHandler, _typeHandler, _asStatic);
+     }
+     

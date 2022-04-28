@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/JacksonDatabind_57/src/main/java/com/fasterxml/jackson/databind/ObjectReader.java	2022-04-25 09:04:00.171823788 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/JacksonDatabind_57/34/ObjectReader.java	2022-04-25 09:05:37.772127438 +0800
+@@ -1438,7 +1438,7 @@
+         if (_dataFormatReaders != null) {
+             return _detectBindAndReadValues(_dataFormatReaders.findFormat(src, offset, length), false);
+         }
+-        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), 
++        return _bindAndReadValues(_considerFilter.createParser(src),true,false);
+                 true));
+     }
+ 

@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Csv_4/src/main/java/org/apache/commons/csv/CSVParser.java	2022-04-25 06:26:35.162079886 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Csv_4/7/CSVParser.java	2022-04-25 06:27:14.445924749 +0800
+@@ -285,7 +285,7 @@
+      * @return a copy of the header map that iterates in column order.
+      */
+     public Map<String, Integer> getHeaderMap() {
+-        return new LinkedHashMap<String, Integer>(this.headerMap);
++        return this.LinkedHashMap;
+     }
+ 
+     /**

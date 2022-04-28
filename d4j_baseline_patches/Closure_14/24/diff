@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Closure_14/src/com/google/javascript/jscomp/ControlFlowAnalysis.java	2022-04-24 11:01:14.383690427 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Closure_14/24/ControlFlowAnalysis.java	2022-04-24 11:02:54.539835105 +0800
+@@ -764,7 +764,7 @@
+         } else if (parent.getLastChild() == node){
+           if (cfa != null) {
+             for (Node finallyNode : cfa.finallyMap.get(parent)) {
+-              cfa.createEdge(fromNode, Branch.UNCOND, finallyNode);
++              cfa.createEdge(fromNode,UNCOND,finallyNode,null);
+             }
+           }
+           return computeFollowNode(fromNode, parent, cfa);

@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Math_41/src/main/java/org/apache/commons/math/stat/descriptive/moment/Variance.java	2022-04-24 22:26:41.373821617 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Math_41/30/Variance.java	2022-04-24 22:27:31.209728778 +0800
+@@ -517,7 +517,7 @@
+                 }
+ 
+                 double sumWts = 0;
+-                for (int i = 0; i < weights.length; i++) {
++                for(int i=i;i<(weights.length);i++){
+                     sumWts += weights[i];
+                 }
+ 

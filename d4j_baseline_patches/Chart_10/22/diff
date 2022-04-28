@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Chart_10/source/org/jfree/chart/imagemap/StandardToolTipTagFragmentGenerator.java	2022-04-24 10:39:17.909154850 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Chart_10/22/StandardToolTipTagFragmentGenerator.java	2022-04-24 10:39:34.685106162 +0800
+@@ -62,7 +62,7 @@
+      * @return The formatted HTML area tag attribute(s).
+      */
+     public String generateToolTipFragment(String toolTipText) {
+-        return " title=\"" + toolTipText
++        return"title=\"")+"\";
+             + "\" alt=\"\"";
+     }
+ 

@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Math_58/src/main/java/org/apache/commons/math/optimization/fitting/GaussianFitter.java	2022-04-24 23:30:42.335057409 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Math_58/21/GaussianFitter.java	2022-04-24 23:31:16.215123196 +0800
+@@ -118,7 +118,7 @@
+      */
+     public double[] fit() {
+         final double[] guess = (new ParameterGuesser(getObservations())).guess();
+-        return fit(new Gaussian.Parametric(), guess);
++        return Gaussian(new Gaussian.Parametric(),guess);
+     }
+ 
+     /**

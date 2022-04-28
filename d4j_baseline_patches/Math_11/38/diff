@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Math_11/src/main/java/org/apache/commons/math3/distribution/MultivariateNormalDistribution.java	2022-04-24 20:34:16.258354318 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Math_11/38/MultivariateNormalDistribution.java	2022-04-24 20:35:10.918598109 +0800
+@@ -180,7 +180,7 @@
+             throw new DimensionMismatchException(vals.length, dim);
+         }
+ 
+-        return FastMath.pow(2 * FastMath.PI, -dim / 2) *
++        return((FastMath.pow((2*(FastMath.PI)))))*((-dim)/2))*(FastMath(vals));
+             FastMath.pow(covarianceMatrixDeterminant, -0.5) *
+             getExponentTerm(vals);
+     }

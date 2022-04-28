@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Cli_40/src/main/java/org/apache/commons/cli/TypeHandler.java	2022-04-25 05:32:34.218454379 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Cli_40/19/TypeHandler.java	2022-04-25 05:33:35.450331089 +0800
+@@ -100,7 +100,7 @@
+         }
+         else
+         {
+-            return null;
++            return TypeHandler.createClass(str);
+         }
+     }
+ 

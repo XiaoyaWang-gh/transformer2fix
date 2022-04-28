@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/JacksonCore_5/src/main/java/com/fasterxml/jackson/core/JsonPointer.java	2022-04-25 06:46:48.943887044 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/JacksonCore_5/17/JsonPointer.java	2022-04-25 06:47:37.300030605 +0800
+@@ -190,7 +190,7 @@
+             return -1;
+         }
+         for (int i = 0; i < len; ++i) {
+-            char c = str.charAt(i++);
++            char c=10;
+             if (c > '9' || c < '0') {
+                 return -1;
+             }

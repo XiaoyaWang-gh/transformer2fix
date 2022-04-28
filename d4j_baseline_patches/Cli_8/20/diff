@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Cli_8/src/java/org/apache/commons/cli/HelpFormatter.java	2022-04-25 04:51:01.337719921 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Cli_8/20/HelpFormatter.java	2022-04-25 04:52:38.421683983 +0800
+@@ -809,7 +809,7 @@
+         while (true)
+         {
+             text = padding + text.substring(pos).trim();
+-            pos = findWrapPos(text, width, nextLineTabStop);
++            pos=findWrapPos(text,width,null,nextLineTabStop);
+ 
+             if (pos == -1)
+             {

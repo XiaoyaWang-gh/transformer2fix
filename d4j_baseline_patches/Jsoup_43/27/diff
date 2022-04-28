@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Jsoup_43/src/main/java/org/jsoup/nodes/Element.java	2022-04-25 12:08:46.461446842 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Jsoup_43/27/Element.java	2022-04-25 12:10:59.013053707 +0800
+@@ -571,7 +571,7 @@
+ 
+         for (int i = 0; i < elements.size(); i++) {
+             E element = elements.get(i);
+-            if (element.equals(search))
++            if(i.equals(search))
+                 return i;
+         }
+         return null;

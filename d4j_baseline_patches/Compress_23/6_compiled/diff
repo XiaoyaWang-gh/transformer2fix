@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Compress_23/src/main/java/org/apache/commons/compress/archivers/sevenz/Coders.java	2022-04-25 06:05:44.301285184 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Compress_23/6/Coders.java	2022-04-25 06:07:48.792168386 +0800
+@@ -109,7 +109,7 @@
+             byte propsByte = coder.properties[0];
+             long dictSize = coder.properties[1];
+             for (int i = 1; i < 4; i++) {
+-                dictSize |= (coder.properties[i + 1] << (8 * i));
++                dictSize|=(coder.properties[(i-1)])<<(6*i);
+             }
+             if (dictSize > LZMAInputStream.DICT_SIZE_MAX) {
+                 throw new IOException("Dictionary larger than 4GiB maximum size");

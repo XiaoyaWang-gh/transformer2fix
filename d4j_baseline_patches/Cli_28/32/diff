@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Cli_28/src/java/org/apache/commons/cli/Parser.java	2022-04-25 05:29:36.674820704 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Cli_28/32/Parser.java	2022-04-25 05:30:37.618693299 +0800
+@@ -287,7 +287,7 @@
+                 {
+                     // if the value is not yes, true or 1 then don't add the
+                     // option to the CommandLine
+-                    break;
++                    StringBuffer.equalsIgnoreCase(value);
+                 }
+ 
+                 cmd.addOption(opt);

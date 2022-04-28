@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Closure_51/src/com/google/javascript/jscomp/CodeConsumer.java	2022-04-24 12:26:25.653075637 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Closure_51/42/CodeConsumer.java	2022-04-24 12:27:00.897542749 +0800
+@@ -238,7 +238,7 @@
+       add(" ");
+     }
+ 
+-    if ((long) x == x) {
++    if(((long)(x))||((x)(x))){
+       long value = (long) x;
+       long mantissa = value;
+       int exp = 0;

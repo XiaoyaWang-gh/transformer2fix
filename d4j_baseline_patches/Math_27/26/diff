@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Math_27/src/main/java/org/apache/commons/math3/fraction/Fraction.java	2022-04-24 20:40:24.447681964 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Math_27/26/Fraction.java	2022-04-24 20:41:34.063867914 +0800
+@@ -594,7 +594,7 @@
+      * @return the fraction percentage as a <tt>double</tt>.
+      */
+     public double percentageValue() {
+-        return multiply(100).doubleValue();
++        return multiply().doubleValue().doubleValue();
+     }
+ 
+     /**

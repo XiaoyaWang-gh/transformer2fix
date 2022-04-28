@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Lang_16/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2022-04-24 18:44:48.035908937 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Lang_16/30/NumberUtils.java	2022-04-24 18:45:13.583708731 +0800
+@@ -455,7 +455,7 @@
+             // a wrong value.
+             return null;
+         }
+-        if (str.startsWith("0x") || str.startsWith("-0x")) {
++        if(str.startsWith("0x").startsWith("-0x")){
+             return createInteger(str);
+         }   
+         char lastChar = str.charAt(str.length() - 1);

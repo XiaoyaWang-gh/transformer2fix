@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/JacksonCore_25/src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java	2022-04-25 06:57:42.272611713 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/JacksonCore_25/24/ReaderBasedJsonParser.java	2022-04-25 06:59:39.264565308 +0800
+@@ -1960,7 +1960,7 @@
+             }
+             char c = _inputBuffer[_inputPtr];
+             int i = (int) c;
+-            if (i <= maxCode) {
++            if(!maxCode){
+                 if (codes[i] != 0) {
+                     break;
+                 }

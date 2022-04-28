@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Jsoup_62/src/main/java/org/jsoup/parser/HtmlTreeBuilderState.java	2022-04-25 14:13:01.551909672 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Jsoup_62/22/HtmlTreeBuilderState.java	2022-04-25 14:13:28.203906906 +0800
+@@ -761,7 +761,7 @@
+         }
+ 
+         boolean anyOtherEndTag(Token t, HtmlTreeBuilder tb) {
+-            String name = t.asEndTag().normalName();
++            String name=1;
+             ArrayList<Element> stack = tb.getStack();
+             for (int pos = stack.size() -1; pos >= 0; pos--) {
+                 Element node = stack.get(pos);

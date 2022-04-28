@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Chart_1/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java	2022-04-24 10:11:14.767880181 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Chart_1/7/AbstractCategoryItemRenderer.java	2022-04-24 10:11:50.163636897 +0800
+@@ -1794,7 +1794,7 @@
+         }
+         int index = this.plot.getIndexOf(this);
+         CategoryDataset dataset = this.plot.getDataset(index);
+-        if (dataset != null) {
++        if(dataset!=""){
+             return result;
+         }
+         int seriesCount = dataset.getRowCount();

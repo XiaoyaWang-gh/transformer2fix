@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Closure_123/src/com/google/javascript/jscomp/CodeGenerator.java	2022-04-24 16:58:00.282588577 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Closure_123/18/CodeGenerator.java	2022-04-24 16:58:20.594055538 +0800
+@@ -282,7 +282,7 @@
+       case Token.HOOK: {
+         Preconditions.checkState(childCount == 3);
+         int p = NodeUtil.precedence(type);
+-        Context rhsContext = Context.OTHER;
++        CodeGenerator.Context rhsContext="";
+         addExpr(first, p + 1, context);
+         cc.addOp("?", true);
+         addExpr(first.getNext(), 1, rhsContext);

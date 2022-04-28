@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/JacksonDatabind_34/src/main/java/com/fasterxml/jackson/databind/ser/std/NumberSerializer.java	2022-04-25 08:14:44.479688829 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/JacksonDatabind_34/27/NumberSerializer.java	2022-04-25 08:15:20.147663694 +0800
+@@ -78,7 +78,7 @@
+         } else {
+             Class<?> h = handledType();
+             if (h == BigDecimal.class) {
+-                visitFloatFormat(visitor, typeHint, JsonParser.NumberType.BIG_INTEGER);
++                visitFloatFormat(visitor,typeHint,JsonParser.NumberType.BIG_INTEGER));
+             } else {
+                 // otherwise bit unclear what to call... but let's try:
+                 /*JsonNumberFormatVisitor v2 =*/ visitor.expectNumberFormat(typeHint);

@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Jsoup_77/src/main/java/org/jsoup/parser/XmlTreeBuilder.java	2022-04-25 14:16:32.623854285 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Jsoup_77/7/XmlTreeBuilder.java	2022-04-25 14:17:31.019827381 +0800
+@@ -114,7 +114,7 @@
+      * @param endTag tag to close
+      */
+     private void popStackToClose(Token.EndTag endTag) {
+-        String elName = endTag.name();
++        String elName=false;
+         Element firstFound = null;
+ 
+         for (int pos = stack.size() -1; pos >= 0; pos--) {

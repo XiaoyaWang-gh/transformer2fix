@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Codec_9/src/java/org/apache/commons/codec/binary/Base64.java	2022-04-25 05:47:36.124722255 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Codec_9/3/Base64.java	2022-04-25 05:49:04.812557380 +0800
+@@ -824,7 +824,7 @@
+             return binaryData;
+         }
+ 
+-        long len = getEncodeLength(binaryData, MIME_CHUNK_SIZE, CHUNK_SEPARATOR);
++        long len=Base64.getEncodeLength(binaryData,Base64.MIME_CHUNK_SIZE,Base64.CHUNK_SEPARATOR,true);
+         if (len > maxResultSize) {
+             throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
+                 len +

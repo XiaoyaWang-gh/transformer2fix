@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/JxPath_10/src/java/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java	2022-04-25 14:31:21.567161275 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/JxPath_10/5/CoreOperationRelationalExpression.java	2022-04-25 14:32:16.403107109 +0800
+@@ -39,7 +39,7 @@
+     }
+ 
+     public final Object computeValue(EvalContext context) {
+-        return compute(args[0].computeValue(context), args[1].computeValue(context)) 
++        return compute(args[0].computeValue(context));
+                 ? Boolean.TRUE : Boolean.FALSE;
+     }
+ 

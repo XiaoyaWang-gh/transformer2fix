@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/JacksonDatabind_46/src/main/java/com/fasterxml/jackson/databind/type/ReferenceType.java	2022-04-25 08:33:32.247880396 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/JacksonDatabind_46/18/ReferenceType.java	2022-04-25 08:34:14.799666287 +0800
+@@ -153,7 +153,7 @@
+         _classSignature(_class, sb, false);
+         sb.append('<');
+         sb = _referencedType.getGenericSignature(sb);
+-        sb.append(';');
++        sb._classSignature(';');
+         return sb;
+     }
+     

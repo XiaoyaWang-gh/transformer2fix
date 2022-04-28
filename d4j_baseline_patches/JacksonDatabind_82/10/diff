@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/JacksonDatabind_82/src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java	2022-04-25 11:06:25.722144929 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/JacksonDatabind_82/10/BeanDeserializerFactory.java	2022-04-25 11:08:31.986247250 +0800
+@@ -492,7 +492,7 @@
+             boolean ignoreAny = ignorals.getIgnoreUnknown();
+             builder.setIgnoreUnknownProperties(ignoreAny);
+             // Or explicit/implicit definitions?
+-            ignored = ignorals.getIgnored();
++            ignored=ignorals.getIgnored().isAbstract();
+             for (String propName : ignored) {
+                 builder.addIgnorable(propName);
+             }

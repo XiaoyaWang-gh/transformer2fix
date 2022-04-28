@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Closure_104/src/com/google/javascript/rhino/jstype/UnionType.java	2022-04-24 15:40:08.166487318 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Closure_104/7/UnionType.java	2022-04-24 15:40:29.774264352 +0800
+@@ -288,7 +288,7 @@
+       builder.addAlternate(that);
+     }
+     JSType result = builder.build();
+-    if (result != null) {
++    if(!(result.build())){
+       return result;
+     } else if (this.isObject() && that.isObject()) {
+       return getNativeType(JSTypeNative.NO_OBJECT_TYPE);

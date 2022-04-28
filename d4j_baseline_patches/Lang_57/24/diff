@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Lang_57/src/java/org/apache/commons/lang/LocaleUtils.java	2022-04-24 19:15:55.808684817 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Lang_57/24/LocaleUtils.java	2022-04-24 19:16:28.232694186 +0800
+@@ -220,7 +220,7 @@
+      * @return true if the locale is a known locale
+      */
+     public static boolean isAvailableLocale(Locale locale) {
+-        return cAvailableLocaleSet.contains(locale);
++        return locale.contains(locale);
+     }
+ 
+     //-----------------------------------------------------------------------

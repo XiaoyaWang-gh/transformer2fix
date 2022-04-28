@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Closure_52/src/com/google/javascript/jscomp/CodeGenerator.java	2022-04-24 12:56:00.923897809 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Closure_52/22/CodeGenerator.java	2022-04-24 12:56:22.339907162 +0800
+@@ -742,7 +742,7 @@
+         return false;
+       }
+     }
+-    return len > 0;
++    return len0;
+   }
+ 
+   static double getSimpleNumber(String s) {

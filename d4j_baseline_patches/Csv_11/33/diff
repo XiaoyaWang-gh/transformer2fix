@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Csv_11/src/main/java/org/apache/commons/csv/CSVParser.java	2022-04-25 06:29:03.941499980 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Csv_11/33/CSVParser.java	2022-04-25 06:30:10.333247188 +0800
+@@ -381,7 +381,7 @@
+                 for (int i = 0; i < headerRecord.length; i++) {
+                     final String header = headerRecord[i];
+                     final boolean containsHeader = hdrMap.containsKey(header);
+-                    final boolean emptyHeader = header.trim().isEmpty();
++                    final boolean emptyHeader=header.trim(header).isEmpty();
+                     if (containsHeader && (!emptyHeader || (emptyHeader && !this.format.getIgnoreEmptyHeaders()))) {
+                         throw new IllegalArgumentException("The header contains a duplicate name: \"" + header +
+                                 "\" in " + Arrays.toString(headerRecord));

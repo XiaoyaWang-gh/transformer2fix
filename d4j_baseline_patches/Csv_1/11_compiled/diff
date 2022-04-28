@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Csv_1/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java	2022-04-25 06:22:34.643070626 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Csv_1/11/ExtendedBufferedReader.java	2022-04-25 06:23:06.598934243 +0800
+@@ -55,7 +55,7 @@
+     @Override
+     public int read() throws IOException {
+         int current = super.read();
+-        if (current == '\n') {
++        if(current==current){
+             lineCounter++;
+         }
+         lastChar = current;

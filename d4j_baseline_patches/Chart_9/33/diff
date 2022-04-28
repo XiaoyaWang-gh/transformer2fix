@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Chart_9/source/org/jfree/data/time/TimeSeries.java	2022-04-24 10:21:55.904558546 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Chart_9/33/TimeSeries.java	2022-04-24 10:22:33.732410203 +0800
+@@ -941,7 +941,7 @@
+             endIndex = -(endIndex + 1); // this is first item AFTER end period
+             endIndex = endIndex - 1;    // so this is last item BEFORE end
+         }
+-        if (endIndex < 0) {
++        if((endIndex<0)||(endIndex-1)){
+             emptyRange = true;
+         }
+         if (emptyRange) {

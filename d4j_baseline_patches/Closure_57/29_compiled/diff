@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Closure_57/src/com/google/javascript/jscomp/ClosureCodingConvention.java	2022-04-24 13:22:58.472018516 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Closure_57/29/ClosureCodingConvention.java	2022-04-24 13:23:25.771931673 +0800
+@@ -194,7 +194,7 @@
+         String qualifiedName = callee.getQualifiedName();
+         if (functionName.equals(qualifiedName)) {
+           Node target = callee.getNext();
+-          if (target != null) {
++          if((target!=null)&&(callee!=null)){
+             className = target.getString();
+           }
+         }

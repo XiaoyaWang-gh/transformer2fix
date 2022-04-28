@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Lang_59/src/java/org/apache/commons/lang/text/StrBuilder.java	2022-04-24 19:19:28.520668524 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Lang_59/18/StrBuilder.java	2022-04-24 19:19:51.260657259 +0800
+@@ -881,7 +881,7 @@
+             String str = (obj == null ? getNullText() : obj.toString());
+             int strLen = str.length();
+             if (strLen >= width) {
+-                str.getChars(0, strLen, buffer, size);
++                str.getChars(0,strLen,buffer,str);
+             } else {
+                 int padLen = width - strLen;
+                 str.getChars(0, strLen, buffer, size);

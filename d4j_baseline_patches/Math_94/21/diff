@@ -1,0 +1,11 @@
+--- /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_projects/Math_94/src/java/org/apache/commons/math/util/MathUtils.java	2022-04-25 01:30:25.491517238 +0800
++++ /home/xiaoyawang/icandoit/src/Defects4J_Experiment/baseline_patches/Math_94/21/MathUtils.java	2022-04-25 01:32:04.710962831 +0800
+@@ -409,7 +409,7 @@
+      * @since 1.1
+      */
+     public static int gcd(int u, int v) {
+-        if (u * v == 0) {
++        if((u*1)==0){
+             return (Math.abs(u) + Math.abs(v));
+         }
+         // keep u and v negative, as negative integers range down to
